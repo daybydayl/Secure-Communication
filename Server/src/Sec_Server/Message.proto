@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message RequestMsg
+{
+	int32 serverId = 1;			//服务器id
+	int32 clientID = 2; 			//客户端id
+    int32 cmdType = 3;			//请求报文命令类型
+    bytes sign = 4;				//数据签名，可能有中文，用bytes
+    bytes data = 5;				//数据(公钥)
+}
+
+message RespondMsg
+{
+	int32 serverId = 1;			//服务器id
+	int32 clientID = 2; 			//客户端id
+	bool status = 3;				//请求结果状态
+    int32 seckeyID = 4;			//响应密钥id
+    bytes data = 5;				//响应密钥数据(对称)
+}

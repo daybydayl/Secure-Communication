@@ -1,0 +1,7 @@
+{
+    "ServerID":1,
+    "ClientID":2,
+	"ClientName":"秘钥客户端1",
+    "ServerIP":"192.168.0.180",
+    "Port":9898
+}
